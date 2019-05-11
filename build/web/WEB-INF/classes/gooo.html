@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+    <style>
+      *{
+       margin: 0;
+       padding: 0; 
+      }
+    #map{
+      height:500px;
+      width:60%;
+    }</style>
+  </head>
+  <body>
+    <div id="map">
+      
+
+    </div>
+    <script>
+     
+    function initMap(){
+      var location= {lat:30.715260,lng:76.707771};
+      var map=new google.maps.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: location
+      }); 
+      myMarker = new google.maps.Marker({
+        position: myLatlng
+      });
+      myMarker.setMap(map);
+      var myTrip = [amsterdam,london];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2
+});
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9gLd45Z_gg2rbCk32upMAVsdsXxU3kw&callback=initMap"></script>
+  </body>
+</html>
